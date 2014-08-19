@@ -6,9 +6,18 @@ For each of the programs below, make a command line tool that works like this:
    developer_challenge --test first_ten_digits -f input_file
 ```
 
+You are allowed to install gems for this challenge.
+
 ### Program 1 - Three hundred responses
-Write a program that concatenates the 300 responses of http://slowapi.com/delay/0.3
-Make the number of requests performed configurable on the command line tool.
+Write a program that retrieves 300 requests to this url: http://slowapi.com/delay/0.3
+Write out the responses to a file on disk.
+
+```
+   response 1<newline>
+   response 2<newline>
+   ...
+```
+Make the number of retrievals configurable on the command line tool.
 
 
 ### Program 2 - Three hundred digits
