@@ -25,7 +25,7 @@ Make the number of retrievals configurable on the command line tool.
 Find the minimum path sum by starting at the top of the triangle below and moving to adjacent numbers on the row below, the minimum total from top to bottom is 15.
 
 ```
-   3
+   <span style="color:red;">3</span>
   7 4
  2 4 6
 8 5 9 2
