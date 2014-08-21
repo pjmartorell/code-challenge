@@ -24,3 +24,5 @@ Make the number of retrievals configurable on the command line tool.
 Work out the first ten digits of the sum of three-hundred 50-digit numbers.
 An example file is provided in the data folder.
 Make the input file configurable with the command line tool.
+
+Ruby makes this problem really easy using big number libraries, but can you do it without them?
