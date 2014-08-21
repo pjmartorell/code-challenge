@@ -22,16 +22,16 @@ Make the number of retrievals configurable on the command line tool.
 
 ### Program 2 - Minimum path sum
 
-Find the minimum path sum by starting at the top of the triangle below and moving to adjacent numbers on the row below, the minimum total from top to bottom is 15.
+Find the minimum path sum by starting at the top of the triangle below and moving to adjacent numbers on the row below, the minimum total from top to bottom is 13.
 
-```
-   <span style="color:red;">3</span>
-  7 4
- 2 4 6
-8 5 9 2
-```
 
-That is, 3 + 4 + 6 + 2 = 15.
+&nbsp;&nbsp;&nbsp;**3**<br>
+&nbsp;&nbsp;7&nbsp;**4**<br>
+&nbsp;2&nbsp;4&nbsp;**6**<br>
+8&nbsp;5&nbsp;**2**&nbsp;9
+
+
+That is, 3 + 4 + 4 + 2 = 13.
 
 Find the minimum path sum from the triangle defined in data/triangle
 
