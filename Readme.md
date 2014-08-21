@@ -3,7 +3,7 @@
 For each of the programs below, make a command line tool that works like this:
 ```
    developer_challenge --test slowapi -n 300
-   developer_challenge --test first_ten_digits -f input_file
+   developer_challenge --test minimum_path_sum -f input_file
 ```
 
 You are allowed to install gems for this challenge.
@@ -20,9 +20,18 @@ Write out the responses to a file on disk.
 Make the number of retrievals configurable on the command line tool.
 
 
-### Program 2 - Three hundred digits
-Work out the first ten digits of the sum of three-hundred 50-digit numbers.
-An example file is provided in the data folder.
-Make the input file configurable with the command line tool.
+### Program 2 - Minimum path sum
 
-Ruby makes this problem really easy using big number libraries, but can you do it without them?
+Find the minimum path sum by starting at the top of the triangle below and moving to adjacent numbers on the row below, the minimum total from top to bottom is 15.
+
+```
+   3
+  7 4
+ 2 4 6
+8 5 9 2
+```
+
+That is, 3 + 4 + 6 + 2 = 15.
+
+Find the minimum path sum from the triangle defined in data/triangle
+
