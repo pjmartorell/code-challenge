@@ -27,7 +27,7 @@ Find the minimum path sum by starting at the top of the triangle below and movin
 
 &nbsp;&nbsp;&nbsp;**3**<br>
 &nbsp;&nbsp;7&nbsp;**4**<br>
-&nbsp;2&nbsp;4&nbsp;**6**<br>
+&nbsp;2&nbsp;**4**&nbsp;6<br>
 8&nbsp;5&nbsp;**2**&nbsp;9
 
 
