@@ -35,3 +35,14 @@ That is, 3 + 4 + 4 + 2 = 13.
 
 Find the minimum path sum from the triangle defined in data/triangle
 Make sure you only take into account valid paths, in the example the path "3,7,6,2" would be invalid because 7 is not adjacent to 6 in the row below.
+
+Make sure you can also detect paths like this:
+
+&nbsp;&nbsp;&nbsp;**3**<br>
+&nbsp;&nbsp;4&nbsp;**7**<br>
+&nbsp;2&nbsp;4&nbsp;**1**<br>
+9&nbsp;9&nbsp;9&nbsp;**1**
+
+That is, 3 + 7 + 1 + 1 = 12.
+
+
