@@ -2,7 +2,7 @@
 
 For each of the programs below, make a command line tool that works like this:
 ```
-   developer_challenge --test slowapi -n 300
+   developer_challenge --test slowapi -n 300 -f output_file
    developer_challenge --test minimum_path_sum -f input_file
 ```
 
