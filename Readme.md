@@ -49,6 +49,6 @@ That is, 3 + 7 + 1 + 1 = 12.
 
 Due to a space-time rip in the triangle-universe some strange portals have appeared.
 Every node with number 13 has formed a portal to every prime number of the next row in the triangle (if there are any).
-Therefore when encountering number 13, there are more options to traverse the triangle then just the adjacent numbers.
+Therefore when encountering number 13, there are more options to traverse the triangle than just the adjacent numbers.
 
 Find the minimum path sum for this triangle.
