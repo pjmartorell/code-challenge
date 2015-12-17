@@ -48,7 +48,7 @@ That is, 3 + 7 + 1 + 1 = 12.
 ### Minimum path sum with a twist
 
 Due to a space-time rip in the triangle-universe some strange portals have appeared.
-Every node with number 13 has formed a portal to every prime number of the next row in the triangle (if there are any).
+Every node with number 13 has formed a portal to every prime number on next row in the triangle (if there are any).
 Therefore when encountering number 13, there are more options to traverse the triangle than just the adjacent numbers.
 
 Find the minimum path sum for this triangle.
