@@ -45,7 +45,7 @@ Make sure you can also detect paths like this:
 
 That is, 3 + 7 + 1 + 1 = 12.
 
-### Minimum path sum with a twist
+### Minimum path sum with a twist (optional)
 
 Due to a space-time rip in the triangle-universe some strange portals have appeared.
 Every node with number 13 has formed a portal to every prime number on next row in the triangle (if there are any).
