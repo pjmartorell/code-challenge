@@ -1,0 +1,42 @@
+#!/usr/bin/env ruby
+
+require 'optparse'
+
+options = {}
+
+opt_parser = OptionParser.new do |opts|
+  opts.banner = "Usage: developer_challenge options"
+  opts.separator  ""
+  opts.separator  "Tests"
+  opts.separator  "     slowapi: retrieve a given number of requests from 'http://slowapi.com/delay/0.3'"
+  opts.separator  ""
+  opts.separator  "Options"
+
+  opts.on("-t", "--test test_name", String, "Test to perform") do |test|
+    options[:test] = test
+  end
+
+  opts.on("-n","--number requests", Integer, "Number of requests to perform") do |number|
+    options[:number] = number
+  end
+
+  opts.on( '-f', '--filename output_file', 'Output collected data to a file' ) do |file|
+    options[:filename] = file
+  end
+
+  opts.on_tail("-h","--help","Display usage information (this message)") do
+    puts opts
+    exit
+  end
+end
+
+begin
+  opt_parser.parse!
+  mandatory = [:filename, :number, :test]
+  missing = mandatory.select{ |param| options[param].nil? }
+  raise OptionParser::MissingArgument, missing.join(', ') unless missing.empty?
+rescue OptionParser::ParseError => e
+  puts e
+  puts opt_parser
+  exit
+end
