@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'optparse'
+require File.expand_path('../../lib/slow_api', __FILE__)
 
 options = {}
 
@@ -39,4 +40,15 @@ rescue OptionParser::ParseError => e
   puts e
   puts opt_parser
   exit
+end
+
+begin
+  case options[:test]
+  when "slowapi"
+    file = File.open(options[:filename], 'w')
+    SlowApi.retrieve(options[:number], file)
+  else
+    puts opt_parser
+  end
+ensure file.close unless file.nil?
 end
