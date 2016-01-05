@@ -1,6 +1,5 @@
 require 'spec_helper'
 require File.expand_path('../../lib/slow_api', __FILE__)
-require "byebug"
 
 describe SlowApi do
   before do

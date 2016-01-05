@@ -2,6 +2,7 @@
 
 require 'optparse'
 require File.expand_path('../../lib/slow_api', __FILE__)
+require File.expand_path('../../lib/minimum_path_sum', __FILE__)
 
 options = {}
 
@@ -33,22 +34,25 @@ end
 
 begin
   opt_parser.parse!
-  mandatory = [:filename, :number, :test]
+  mandatory = [:filename, :test]
   missing = mandatory.select{ |param| options[param].nil? }
   raise OptionParser::MissingArgument, missing.join(', ') unless missing.empty?
+
+  case options[:test]
+  when "slowapi"
+    file = File.open(options[:filename], 'w')
+    raise OptionParser::MissingArgument, :number unless options[:number]
+    SlowApi.retrieve(options[:number], file)
+  when "minimum_path_sum"
+    file = File.open(options[:filename], 'r')
+    puts MinimumPathSum.calculate(file)
+  else
+    puts opt_parser
+  end
 rescue OptionParser::ParseError => e
   puts e
   puts opt_parser
   exit
-end
-
-begin
-  case options[:test]
-  when "slowapi"
-    file = File.open(options[:filename], 'w')
-    SlowApi.retrieve(options[:number], file)
-  else
-    puts opt_parser
-  end
-ensure file.close unless file.nil?
+ensure
+  file.close unless file.nil?
 end
