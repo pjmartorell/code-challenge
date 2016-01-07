@@ -3,6 +3,7 @@
 require 'optparse'
 require File.expand_path('../../lib/slow_api', __FILE__)
 require File.expand_path('../../lib/minimum_path_sum', __FILE__)
+require File.expand_path('../../lib/minimum_path_sum_twisted', __FILE__)
 
 options = {}
 
@@ -11,6 +12,7 @@ opt_parser = OptionParser.new do |opts|
   opts.separator  ""
   opts.separator  "Tests"
   opts.separator  "     slowapi: retrieve a given number of requests from 'http://slowapi.com/delay/0.3'"
+  opts.separator  "     minimum_path_sum: find the minimum path sum given a triangle"
   opts.separator  ""
   opts.separator  "Options"
 
@@ -24,6 +26,10 @@ opt_parser = OptionParser.new do |opts|
 
   opts.on( '-f', '--filename output_file', 'Output collected data to a file' ) do |file|
     options[:filename] = file
+  end
+
+  opts.on( '--twisted', 'Run minimum path sum test in twisted mode' ) do
+    options[:twisted] = true
   end
 
   opts.on_tail("-h","--help","Display usage information (this message)") do
@@ -45,7 +51,11 @@ begin
     SlowApi.retrieve(options[:number], file)
   when "minimum_path_sum"
     file = File.open(options[:filename], 'r')
-    puts MinimumPathSum.calculate(file)
+    if options[:twisted]
+      puts MinimumPathSumTwisted.calculate(file)
+    else
+      puts MinimumPathSum.calculate(file)
+    end
   else
     puts opt_parser
   end
