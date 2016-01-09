@@ -3,7 +3,6 @@
 require 'optparse'
 require File.expand_path('../../lib/slow_api', __FILE__)
 require File.expand_path('../../lib/minimum_path_sum', __FILE__)
-require File.expand_path('../../lib/minimum_path_sum_twisted', __FILE__)
 
 options = {}
 
@@ -51,11 +50,7 @@ begin
     SlowApi.retrieve(options[:number], file)
   when "minimum_path_sum"
     file = File.open(options[:filename], 'r')
-    if options[:twisted]
-      puts MinimumPathSumTwisted.calculate(file)
-    else
-      puts MinimumPathSum.calculate(file)
-    end
+    puts MinimumPathSum.calculate(file, options[:twisted])
   else
     puts opt_parser
   end
